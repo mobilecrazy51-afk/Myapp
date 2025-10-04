@@ -1,2 +1,1 @@
-# Myapp
-For G-12 students 
+# G-12 subjects 
