@@ -1,28 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="my">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>G-12 Subjects</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; background: #fafafa; }
-    h1 { color: #e91e63; }
-    .subject-btn {
-      display: block; margin: 10px auto; padding: 10px 20px;
-      background: #2196f3; color: white; border-radius: 5px; width: 200px;
-      text-decoration: none;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>G-12 Study App</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <h1>G-12 Subjects</h1>
-  <a href="#" class="subject-btn">မြန်မာစာ</a>
-  <a href="#" class="subject-btn">English</a>
-  <a href="#" class="subject-btn">Mathematics</a>
-  <a href="#" class="subject-btn">Physics</a>
-  <a href="#" class="subject-btn">Chemistry</a>
-  <a href="#" class="subject-btn">Biology</a>
-  <a href="#" class="subject-btn">Geography</a>
-  <a href="#" class="subject-btn">Social Studies</a>
+  <header class="topbar">
+    <img src="assets/logo.png" alt="logo" class="logo">
+    <h1>G-12 Study App</h1>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <a class="card" href="exercise.html">
+        <div class="icon">📘</div>
+        <h3>Exercises</h3>
+        <p>Practice questions & answers</p>
+      </a>
+
+      <a class="card" href="video.html">
+        <div class="icon">🎥</div>
+        <h3>Video Lessons</h3>
+        <p>Watch tutorial videos</p>
+      </a>
+
+      <a class="card" href="assets/myanmar/lesson1.pdf" target="_blank">
+        <div class="icon">📄</div>
+        <h3>PDF Lessons</h3>
+        <p>Download / view PDFs</p>
+      </a>
+
+      <a class="card" href="policy.html">
+        <div class="icon">🔒</div>
+        <h3>Privacy Policy</h3>
+        <p>Data & privacy information</p>
+      </a>
+
+      <a class="card" href="terms.html">
+        <div class="icon">📜</div>
+        <h3>Terms</h3>
+        <p>Terms & conditions</p>
+      </a>
+    </section>
+
+    <section class="subjects">
+      <h2>Subjects</h2>
+      <div class="subject-list">
+        <a class="subject" href="#">မြန်မာစာ</a>
+        <a class="subject" href="#">English</a>
+        <a class="subject" href="#">Mathematics</a>
+        <a class="subject" href="#">Physics</a>
+        <a class="subject" href="#">Chemistry</a>
+        <a class="subject" href="#">Biology</a>
+        <a class="subject" href="#">Geography</a>
+        <a class="subject" href="#">Social Studies</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© G-12 Study App — For educational use</small>
+  </footer>
+
+  <script>
+  // register service worker (already have file service-worker.js)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('SW registered'))
+      .catch(err => console.log('SW failed', err));
+  }
+  </script>
 </body>
 </html>
