@@ -26,3 +26,11 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+const urlsToCache = [
+  "index.html",
+  "exercise.html",
+  "video.html",
+  "assets/style.css",
+  "assets/videos/lesson1.mp4",
+  "assets/pdfs/lesson1.pdf"
+];
