@@ -1,6 +1,44 @@
 <!doctype html>
 <html lang="my">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-12 Study App</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 G-12 Study App</h1>
+    <p>မင်္ဂလာပါ။ အောက်ကအချက်များဖြည့်ပါ။</p>
+
+    <form id="userForm">
+      <label>အမျိုးအစား:</label><br>
+      <select id="gender" required>
+        <option value="">--ရွေးပါ--</option>
+        <option value="male">👦 အမျိုးသား</option>
+        <option value="female">👧 အမျိုးသမီး</option>
+      </select><br><br>
+
+      <label>အနေနဲ့:</label><br>
+      <select id="role" required>
+        <option value="">--ရွေးပါ--</option>
+        <option value="student">🎒 ကျောင်းသား</option>
+        <option value="teacher">👩‍🏫 ဆရာ/ဆရာမ</option>
+      </select><br><br>
+
+      <button type="submit">Continue ➡️</button>
+    </form>
+
+    <div id="googleDiv" style="display:none;">
+      <p>သင့် Google account ဖြင့်ဝင်မည်:</p>
+      <button id="googleSignIn">🔐 Sign in with Google</button>
+    </div>
+  </div>
+</body>
+</html>
+<html lang="my">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>G-12 Study App</title>
