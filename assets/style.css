@@ -43,3 +43,44 @@ body{
   .topbar{padding:10px}
   .cards{grid-template-columns:repeat(2,1fr)}
 }
+body {
+  background: linear-gradient(135deg, #2196f3, #00bcd4);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+select, button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #fff;
+  color: #2196f3;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2196f3;
+  color: #fff;
+}
