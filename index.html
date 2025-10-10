@@ -1,123 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="my">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>G-12 Study App</title>
+
+  <!-- Main Style -->
   <link rel="stylesheet" href="assets/style.css">
+
+  <!-- App Info -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/logo.png">
+  <meta name="theme-color" content="#2196f3">
+
+  <!-- JS Logic -->
   <script type="module" src="main.js"></script>
 </head>
 <body>
   <div class="container">
+    <img src="assets/logo.png" alt="App Logo" class="logo">
     <h1>🎓 G-12 Study App</h1>
-    <p>မင်္ဂလာပါ။ အောက်ကအချက်များဖြည့်ပါ။</p>
+    <p>ဘာသာရပ်ကို ရွေးပါ။</p>
 
-    <form id="userForm">
-      <label>အမျိုးအစား:</label><br>
-      <select id="gender" required>
-        <option value="">--ရွေးပါ--</option>
-        <option value="male">👦 အမျိုးသား</option>
-        <option value="female">👧 အမျိုးသမီး</option>
-      </select><br><br>
+    <div class="subjects">
+      <a href="exercise.html" class="btn">📗 မြန်မာစာ</a>
+      <a href="exercise.html" class="btn">📘 English</a>
+      <a href="exercise.html" class="btn">🧮 Mathematics</a>
+      <a href="exercise.html" class="btn">⚡ Physics</a>
+      <a href="exercise.html" class="btn">🧪 Chemistry</a>
+      <a href="exercise.html" class="btn">🌍 ဘောဂဗေဒ</a>
+      <a href="exercise.html" class="btn">🧬 Biology</a>
+      <a href="exercise.html" class="btn">🏛 လူမှုရေး</a>
+    </div>
 
-      <label>အနေနဲ့:</label><br>
-      <select id="role" required>
-        <option value="">--ရွေးပါ--</option>
-        <option value="student">🎒 ကျောင်းသား</option>
-        <option value="teacher">👩‍🏫 ဆရာ/ဆရာမ</option>
-      </select><br><br>
-
-      <button type="submit">Continue ➡️</button>
-    </form>
-
-    <div id="googleDiv" style="display:none;">
-      <p>သင့် Google account ဖြင့်ဝင်မည်:</p>
-      <button id="googleSignIn">🔐 Sign in with Google</button>
+    <div class="footer">
+      <a href="terms.html">📜 Terms</a> |
+      <a href="policy.html">🔒 Policy</a>
     </div>
   </div>
-</body>
-</html>
-<html lang="my">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>G-12 Study App</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="assets/style.css">
-<footer>
-  <a href="terms.html">📜 Terms & Conditions</a> |
-  <a href="policy.html">🔒 Privacy Policy</a>
-</footer>
-</head>
-<body>
-  <header class="topbar">
-    <img src="assets/logo.png" alt="logo" class="logo">
-    <h1>G-12 Study App</h1>
-  </header>
 
-  <main class="container">
-    <section class="cards">
-      <a class="card" href="exercise.html">
-        <div class="icon">📘</div>
-        <h3>Exercises</h3>
-        <p>Practice questions & answers</p>
-      </a>
-
-      <a class="card" href="video.html">
-        <div class="icon">🎥</div>
-        <h3>Video Lessons</h3>
-        <p>Watch tutorial videos</p>
-      </a>
-
-      <a class="card" href="assets/myanmar/lesson1.pdf" target="_blank">
-        <div class="icon">📄</div>
-        <h3>PDF Lessons</h3>
-        <p>Download / view PDFs</p>
-      </a>
-
-      <a class="card" href="policy.html">
-        <div class="icon">🔒</div>
-        <h3>Privacy Policy</h3>
-        <p>Data & privacy information</p>
-      </a>
-
-      <a class="card" href="terms.html">
-        <div class="icon">📜</div>
-        <h3>Terms</h3>
-        <p>Terms & conditions</p>
-      </a>
-    </section>
-
-    <section class="subjects">
-      <h2>Subjects</h2>
-      <div class="subject-list">
-        <a class="subject" href="#">မြန်မာစာ</a
-        <a class="subject" href="#">English</a>
-        <a class="subject" href="#">Mathematics</a>
-        <a class="subject" href="#">Physics</a>
-        <a class="subject" href="#">Chemistry</a>
-        <a class="subject" href="#">Biology</a>
-        <a class="subject" href="#">​ဘောဂဗေဒ</a>
-        <a class="subject" href="#">လူမှုရေး</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <small>© G-12 Study App — For educational use</small>
-  </footer>
-
+  <!-- Offline Registration -->
   <script>
-  // register service worker (already have file service-worker.js)
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(() => console.log('SW registered'))
-      .catch(err => console.log('SW failed', err));
-  }
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("✅ Service Worker Registered"))
+        .catch(err => console.log("❌ SW registration failed:", err));
+    }
   </script>
 </body>
 </html>
-
-
 
 
